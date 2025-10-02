@@ -22,6 +22,10 @@ const Gallery = dynamic(() => import('@/components/Gallery.jsx'), {
   loading: () => <LoadingScreen />,
 });
 
+const Footer = dynamic(() => import('@/components/Footer.jsx'), {
+  loading: () => <LoadingScreen />,
+});
+
 
 
 
@@ -46,6 +50,10 @@ export default function Page() {
 
       <Suspense fallback={<LoadingScreen />}>
         <Gallery />
+      </Suspense>
+
+      <Suspense fallback={<LoadingScreen />}>
+        <Footer />
       </Suspense>
     </div>
   );

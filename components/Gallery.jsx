@@ -6,7 +6,7 @@ import BlurText from './BlurText'
 const Gallery = () => {
     return (
         <div className="relative  bg-[#09011A] text-white p-4 sm:p-6 md:p-8 md:pb-14">
-            <div className="relative w-full mb-6 sm:mb-8 lg:mb-12">
+            <div className="relative w-full mb-6 sm:mb-8 lg:mb-12 lg:pl-4">
                 <BlurText
                     text="Glimpses of the अVINYA 2024"
                     delay={150}

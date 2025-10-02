@@ -1,7 +1,8 @@
 "use client";
 import { useState } from 'react';
+import Link from 'next/link';
 
-const EventCard = ({ title, description, timing, venue, imageUrl }) => {
+const EventCard = ({ title, description, timing, venue, imageUrl, RegistrationLink }) => {
     const [isFlipped, setIsFlipped] = useState(false);
 
     const handleClick = () => {
@@ -10,8 +11,12 @@ const EventCard = ({ title, description, timing, venue, imageUrl }) => {
 
     return (
         <div
-            className="flip-card-container h-[270px]     sm:h-72 md:h-[20rem] w-full max-w-[240px] sm:max-w-[280px]  md:max-w-sm mx-auto perspective-1000 group cursor-pointer"
-            onClick={handleClick}
+            className="flip-card-container h-[300px]  sm:h-80 md:h-[21.5rem] w-full max-w-[240px] sm:max-w-[280px]  md:max-w-[sm] mx-auto perspective-1000 group "
+            onClick={() => {
+                if (window.innerWidth < 768) {
+                    handleClick();
+                }
+            }}
         >
             {/* Glowing gradient background */}
 
@@ -19,17 +24,18 @@ const EventCard = ({ title, description, timing, venue, imageUrl }) => {
             <div className={`absolute -inset-2 bg-gradient-to-r from-purple-600/30 to-pink-500/30 blur-xl transition-opacity duration-500 ${!isFlipped ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}></div>
             {/* <div className={`absolute inset-0 bg-white/20 blur-xl transition-opacity opacity-100 duration-500 group-hover:opacity-0`}></div> */}
 
-            <div className={`flip-card-inner-container relative w-full h-full transition-transform duration-700 ease-in-out transform-style-3d ${isFlipped ? 'rotate-y-180' : ''} md:group-hover:rotate-y-180`}>
+            <div className={`flip-card-inner-container  relative w-full h-full transition-transform duration-700 ease-in-out transform-style-3d ${isFlipped ? 'rotate-y-180' : ''} md:group-hover:rotate-y-180`}>
                 {/* Front of card */}
                 <div className="flip-card-face flip-card-front absolute w-full h-full backface-hidden  border-2 border-purple-500/40 overflow-hidden shadow-2xl bg-gradient-to-br from-slate-950 via-purple-950/50 to-slate-950">
                     <div className="relative flex items-center flex-col justify-center w-full h-full p-4 sm:p-5">
                         {/* Image container with proper centering */}
-                        <div className="relative w-full flex-1 flex items-center justify-center mb-3 sm:mb-4">
-                            <div className="relative w-44 h-44 sm:w-48 sm:h-48 md:w-56 md:h-56">
+                        <div className="relative w-full flex-1 flex items-center justify-center mt-3 mb-3 sm:mb-4">
+                            <div className="relative w-54 h-60  sm:w-64 sm:h-64 md:w-72 md:h-[280px]">
                                 <img
-                                    src="/komicSense.webp"
+                                     loading="lazy"
+                                    src={imageUrl}
                                     alt={title}
-                                    className="object-contain w-full h-full drop-shadow-2xl"
+                                    className=" w-full h-full drop-shadow-2xl"
                                 />
 
                                 <div className="absolute inset-0 -z-10 bg-white/20 w-full h-full blur-2xl  "></div>
@@ -70,10 +76,11 @@ const EventCard = ({ title, description, timing, venue, imageUrl }) => {
                             </div>
                         </div>
                     </div>
-
-                    <button className="w-full mt-4 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold py-2.5 sm:py-3 px-4 rounded-lg shadow-lg hover:shadow-yellow-500/50 transition-all duration-300 transform hover:scale-105 active:scale-95 text-xs sm:text-sm">
-                        Register Now 🚀
-                    </button>
+                    <Link href={RegistrationLink} target="_blank" passHref>
+                        <button className="w-full mt-4 cursor-pointer bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold py-2.5 sm:py-3 px-4 rounded-lg shadow-lg hover:shadow-yellow-500/50 transition-all duration-300 transform hover:scale-105 active:scale-95 text-xs sm:text-sm">
+                            Register Now 🚀
+                        </button>
+                    </Link>
                 </div>
             </div>
 

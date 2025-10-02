@@ -39,33 +39,67 @@ export default function SponsorCarousel() {
 
                 {/* Scrolling Container */}
                 <div className="relative">
-                    {/* Desktop: Horizontal Scrolling Carousel */}
-                    <div className="hidden md:flex gap-8 animate-scroll items-center">
-                        {duplicatedSponsors.map((sponsor, index) => (
-                            <div
-                                key={`${sponsor.name}-${index}`}
-                                className="group flex-shrink-0 w-56 perspective-1000"
-                            >
-                                <div className="relative h-20 w-full transition-all duration-500 ease-out transform group-hover:scale-110 group-hover:-translate-y-2">
-                                    {/* Glowing effect on hover */}
-                                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-60"></div>
+                    {/* Desktop: Horizontal Scrolling Carousel - Row 1 */}
+                    <div className="hidden md:block ">
+                        <div className="flex gap-8 animate-scroll items-center whitespace-nowrap">
+                            {duplicatedSponsors.map((sponsor, index) => (
+                                <div
+                                    key={`${sponsor.name}-${index}`}
+                                    className="group flex-shrink-0 w-56 perspective-1000"
+                                >
+                                    <div className="relative h-16 w-full transition-all duration-500 ease-out transform group-hover:scale-110 group-hover:-translate-y-2">
+                                        {/* Glowing effect on hover */}
+                                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-60"></div>
 
-                                    {/* Card */}
-                                    <div className="relative h-full w-full rounded-2xl bg-transparent backdrop-blur-sm p-6 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:bg-slate-700/70 group-hover:shadow-2xl">
-                                        {/* Shine effect */}
-                                        <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"></div>
+                                        {/* Card */}
+                                        <div className="relative h-full w-full rounded-2xl  backdrop-blur-sm p-6 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:bg-slate-700/70 group-hover:border-purple-500/50 group-hover:shadow-2xl">
+                                            {/* Shine effect */}
+                                            <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"></div>
 
-                                        {/* Logo */}
-                                        <img
-                                            src={"/reskill.webp"}
-                                            alt={sponsor.name}
-                                            className="relative z-10 h-auto max-h-16 w-auto max-w-full object-contain filter grayscale-50 opacity-50 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110"
-                                            loading="lazy"
-                                        />
+                                            {/* Logo */}
+                                            <img
+                                             loading="lazy"
+                                                src={"/reskill.webp"}
+                                                alt={sponsor.name}
+                                                className="relative z-10 h-auto max-h-16 w-auto max-w-full object-contain filter grayscale-50 opacity-70 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110"
+                                                loading="lazy"
+                                            />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Desktop: Horizontal Scrolling Carousel - Row 2 */}
+                    <div className="hidden md:block  mt-4">
+                        <div className="flex gap-8 animate-scroll-reverse items-center whitespace-nowrap">
+                            {duplicatedSponsors.map((sponsor, index) => (
+                                <div
+                                    key={`${sponsor.name}-reverse-${index}`}
+                                    className="group flex-shrink-0 w-56 perspective-1000"
+                                >
+                                    <div className="relative h-16 w-full transition-all duration-500 ease-out transform group-hover:scale-110 group-hover:-translate-y-2">
+                                        {/* Glowing effect on hover */}
+                                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-60"></div>
+
+                                        {/* Card */}
+                                        <div className="relative h-full w-full rounded-2xl  backdrop-blur-sm p-6 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:bg-slate-700/70 group-hover:border-purple-500/50 group-hover:shadow-2xl">
+                                            {/* Shine effect */}
+                                            <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"></div>
+
+                                            {/* Logo */}
+                                            <img
+                                                src={"/reskill.webp"}
+                                                alt={sponsor.name}
+                                                className="relative z-10 h-auto max-h-16 w-auto max-w-full object-contain filter grayscale-0 opacity-70 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110"
+                                                loading="lazy"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
 
                     {/* Mobile: Grid Layout */}
@@ -80,7 +114,7 @@ export default function SponsorCarousel() {
                                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-60"></div>
 
                                     {/* Card */}
-                                    <div className="relative h-full w-full rounded-2xl bg-transparent backdrop-blur-sm p-6 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:bg-slate-700/70 group-hover:shadow-2xl">
+                                    <div className="relative h-full w-full rounded-2xl  backdrop-blur-sm p-6 flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:bg-slate-700/70 group-hover:border-purple-500/50 group-hover:shadow-2xl">
                                         {/* Shine effect */}
                                         <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"></div>
 
@@ -88,7 +122,7 @@ export default function SponsorCarousel() {
                                         <img
                                             src={"/reskill.webp"}
                                             alt={sponsor.name}
-                                            className="relative z-10 h-auto max-h-16 w-auto max-w-full object-contain filter grayscale-0 opacity-50 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110"
+                                            className="relative z-10 h-auto max-h-16 w-auto max-w-full object-contain filter grayscale-0 opacity-70 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110"
                                             loading="lazy"
                                         />
                                     </div>
@@ -108,21 +142,21 @@ export default function SponsorCarousel() {
                         transform: translateX(-50%);
                     }
                 }
-                
-                // @keyframes gradient {
-                //     0% {
-                //         background-position: 0% 50%;
-                //     }
-                //     50% {
-                //         background-position: 100% 50%;
-                //     }
-                //     100% {
-                //         background-position: 0% 50%;
-                //     }
-                // }
+                @keyframes scroll-reverse {
+                    0% {
+                        transform: translateX(-50%);
+                    }
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
                 
                 .animate-scroll {
                     animation: scroll 30s linear infinite;
+                }
+
+                .animate-scroll-reverse {
+                    animation: scroll-reverse 30s linear infinite;
                 }
                 
                 .animate-scroll:hover {

@@ -67,8 +67,10 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* <LoadingScreen /> */}
-        <Header />
-        <SmoothScrolling>{children}</SmoothScrolling>
+        <SmoothScrolling>
+          <Header />
+          {children}
+        </SmoothScrolling>
       </body>
     </html>
   );
