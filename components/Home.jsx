@@ -1,10 +1,28 @@
 "use client"
 import LiquidEther from "./LiquidEther"
-import Spline from "@splinetool/react-spline"
+import { useState, useEffect, Suspense, lazy } from 'react';
+
+const Spline = lazy(() => import('@splinetool/react-spline'));
+
+const SplineLoader = () => (
+    <div className="absolute inset-0 flex items-center justify-center">
+        <div className="relative w-32 h-32">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full blur-2xl opacity-40 animate-pulse"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-16 h-16 border-4 border-purple-500/30 border-t-purple-500 rounded-full animate-spin"></div>
+            </div>
+        </div>
+    </div>
+);
+
+
 
 const Home = () => {
+
+
     return (
         <div className="relative  min-h-[100svh] overflow-hidden">
+
             {/* Background */}
             <div className="absolute inset-0 -z-10 bg-[#09011A]">
                 <LiquidEther
@@ -33,11 +51,13 @@ const Home = () => {
                     <div className="order-2 md:order-1 w-full flex items-center justify-center ">
                         <div className="group relative w-full max-w-[520px] md:max-w-[640px] lg:max-w-[720px] h-[300px] sm:h-[380px] md:h-[460px] lg:h-[600px] lg:mt-24 mt-0">
                             <div className="absolute inset-0 rounded-full transition duration-500 opacity-0 group-hover:opacity-100 right-20 blur-2xl bg-purple-500/40"></div>
-                            <Spline
-                                className="absolute inset-0 pl-12 lg:pl-0 "
-                                style={{ width: "100%", height: "100%" }}
-                                scene="https://prod.spline.design/gsE8xu03UCTC4KFO/scene.splinecode"
-                            />
+                            <Suspense fallback={<SplineLoader />}>
+                                <Spline
+                                    className="absolute inset-0 pl-12 lg:pl-0 "
+                                    style={{ width: "100%", height: "100%" }}
+                                    scene="https://prod.spline.design/gsE8xu03UCTC4KFO/scene.splinecode"
+                                />
+                            </Suspense>
                         </div>
                     </div>
 
@@ -55,7 +75,7 @@ const Home = () => {
                             {"Let's Be A Part Of An Exciting Journey On"}
                         </h5>
 
-                        <h2 className="text-2xl md:text-3xl lg:text-4xl mx-auto text-[#FFD400] rokkitt-regular">October 14-15, 2025</h2>
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl mx-auto text-[#FFD400] rokkitt-regular">October 13, 2025</h2>
 
                         <a
                             href="#"
