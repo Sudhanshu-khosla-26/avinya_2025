@@ -79,28 +79,35 @@ const Event = () => {
     ];
 
     return (
-        // <div className="min-h-screen bg-gradient-to-br from-slate-950 text-white via-purple-950 to-slate-950 p-4 sm:p-6 md:p-8">
-        <div className="min-h-screen bg-[#09011A] text-white p-4 sm:p-6 md:p-8">
-            <div className="relative w-full mb-6 sm:mb-8 lg:mb-12">
-                <BlurText
-                    text="अVINYA Events"
-                    delay={150}
-                    animateBy="words"
-                    direction="top"
-                    className="text-2xl w-fit mx-auto lg:mx-0 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center lg:text-left"
-                />
-                {/* Underline decoration */}
-                <div className="mt-2 sm:mt-4 mx-auto lg:mx-0 w-32 sm:w-48 h-1 bg-gradient-to-r from-[#5936e5] via-[#d966ff] to-[#5936e5] rounded-full"></div>
-            </div>
-            <div className="max-w-6xl mx-auto">
+        <>
+            {/*  <div className="min-h-screen bg-gradient-to-br from-slate-950 text-white via-purple-950 to-slate-950 p-4 sm:p-6 md:p-8"> */}
+            <div className="relative min-h-screen bg-[#09011A] text-white p-4 sm:p-6 md:p-8 md:pb-14">
+                <div className="relative w-full mb-6 sm:mb-8 lg:mb-12">
+                    <BlurText
+                        text="अVINYA Events"
+                        delay={150}
+                        animateBy="words"
+                        direction="top"
+                        className="text-2xl w-fit mx-auto lg:mx-0 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center lg:text-left"
+                    />
+                    {/* Underline decoration */}
+                    <div className="mt-2 sm:mt-4 mx-auto lg:mx-0 w-32 sm:w-48 h-1 bg-gradient-to-r from-[#5936e5] via-[#d966ff] to-[#5936e5] rounded-full"></div>
+                </div>
+                <div className="max-w-6xl mx-auto">
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 md:gap-8">
-                    {sampleEvents.map((event, index) => (
-                        <EventCard key={index} {...event} />
-                    ))}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 md:gap-8">
+                        {sampleEvents.map((event, index) => (
+                            <EventCard key={index} {...event} />
+                        ))}
+                    </div>
+                </div>
+                <div className="absolute inset-0 opacity-20">
+                    {/* <div className="absolute bottom-20 left-10 h-72 w-72 rounded-full bg-blue-500 blur-3xl animate-pulse"></div> */}
+                    <div className="absolute -bottom-80 right-10 h-96 w-96 rounded-full bg-purple-500 blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
                 </div>
             </div>
-        </div>
+
+        </>
 
     );
 }

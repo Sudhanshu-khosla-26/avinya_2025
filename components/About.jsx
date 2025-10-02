@@ -29,7 +29,7 @@ const About = () => {
                     <div className="w-full lg:w-1/2 xl:w-3/6 flex-shrink-0">
                         <div className="relative w-full max-w-md mx-auto lg:max-w-none">
                             {/* Responsive image container */}
-                            <div className="relative w-full max-h-[200px] md:max-h-[300px]">
+                            <div className="relative w-full max-h-[250px] md:max-h-[300px]">
                                 {/* Glow background */}
                                 <div className="absolute inset-0 bg-gradient-to-r from-[#5936e5]/40 to-[#d966ff]/40 rounded-2xl blur-xl"></div>
 
@@ -74,16 +74,16 @@ const About = () => {
                             {/* Events grid - responsive */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 text-sm sm:text-base">
                                 {[
-                                    "Ideathon",
-                                    "Poster Making",
-                                    "Tech Quiz",
-                                    "AI Creative Clash ",
-                                    " Zero Day Apocalypse",
-                                    "E-Waste Art",
-                                    "Bits N Bytes",
-                                    "Debate ",
-                                    "Open Innovation",
-                                    "Debugging "
+                                    "BUG SMASH",
+                                    "CREATE-A-SCENE",
+                                    "E-SCRAP CANVAS",
+                                    "THINK BYTE",
+                                    "TECH TADKA",
+                                    "TALK TACT",
+                                    "INNOVISTA",
+                                    "AI CREATIVE CLASH",
+                                    "THINK TANK",
+                                    "CYPHER"
                                 ].map((event, index) => (
                                     <div key={index} className="flex items-center space-x-2 text-gray-200">
                                         <span className="w-2 h-2 bg-gradient-to-r from-[#5936e5] to-[#d966ff] rounded-full flex-shrink-0"></span>
@@ -102,6 +102,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }

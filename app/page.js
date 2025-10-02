@@ -1,16 +1,52 @@
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
+import LoadingScreen from "@/components/LoadingScreen";
 
-import About from '@/components/About';
-import Home from '@/components/Home';
-import Event from '@/components/Event';
+// Lazy load components with dynamic imports
+const Home = dynamic(() => import('@/components/Home'), {
+  loading: () => <LoadingScreen />,
+});
+
+const About = dynamic(() => import('@/components/About'), {
+  loading: () => <LoadingScreen />,
+});
+
+const Event = dynamic(() => import('@/components/Event'), {
+  loading: () => <LoadingScreen />,
+});
+
+const SponsorCarousel = dynamic(() => import('@/components/SponsorshipPage'), {
+  loading: () => <LoadingScreen />,
+});
+const Gallery = dynamic(() => import('@/components/Gallery.jsx'), {
+  loading: () => <LoadingScreen />,
+});
+
+
+
 
 export default function Page() {
   return (
-    <div className="h-fit overflow-x-hidden  ">
-      <Home />
-      <About />
-      <Event />
-    </div>
+    <div className="h-fit overflow-x-hidden">
+      <Suspense fallback={<LoadingScreen />}>
+        <Home />
+      </Suspense>
 
+      <Suspense fallback={<LoadingScreen />}>
+        <About />
+      </Suspense>
+
+      <Suspense fallback={<LoadingScreen />}>
+        <Event />
+      </Suspense>
+
+      <Suspense fallback={<LoadingScreen />}>
+        <SponsorCarousel />
+      </Suspense>
+
+      <Suspense fallback={<LoadingScreen />}>
+        <Gallery />
+      </Suspense>
+    </div>
   );
 }
-
