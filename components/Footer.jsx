@@ -10,8 +10,8 @@ export default function Footer() {
     const socialLinks = [
         { name: 'Instagram', icon: Instagram, url: 'https://www.instagram.com/the_empirical_society/', color: 'hover:text-pink-500' },
         { name: 'LinkedIn', icon: Linkedin, url: 'https://www.linkedin.com/company/the-empirical-society/', color: 'hover:text-blue-500' },
-        { name: 'Twitter', icon: Twitter, url: '#', color: 'hover:text-sky-400' },
-        { name: 'Mail', icon: Mail, url: '#', color: 'hover:text-red-500' },
+        // { name: 'Twitter', icon: Twitter, url: '#', color: 'hover:text-sky-400' },
+        { name: 'Mail', icon: Mail, url: 'societytheempirical@gmail.com', color: 'hover:text-red-500' },
     ];
 
     return (
