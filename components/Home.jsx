@@ -37,7 +37,7 @@ const Home = () => {
                 <section className="grid grid-cols-1 md:grid-cols-2 items-center justify-items-center gap-8 text-center md:text-left w-full mt-20 lg:mt-0">
                     <div className="order-2 md:order-1 w-full flex items-center justify-center ">
                         <div className="group relative w-full max-w-[520px] md:max-w-[640px] lg:max-w-[720px] h-[300px] sm:h-[380px] md:h-[460px] lg:h-[600px] lg:mt-24 mt-0">
-                            <div className="absolute inset-0 rounded-full transition duration-500 opacity-0 group-hover:opacity-100 right-20 blur-2xl bg-purple-500/40"></div>
+                            <div className="absolute inset-0 rounded-full transition duration-500 opacity-100 left-12 md:left-0 md:opacity-0 group-hover:opacity-100 right-20 blur-2xl bg-purple-500/40"></div>
 
                             <Spline
                                 className="absolute inset-0 pl-12 lg:pl-0 "
