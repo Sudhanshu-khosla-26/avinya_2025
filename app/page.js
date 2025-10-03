@@ -95,7 +95,7 @@ export default function Page() {
       {/* <BlurDivider /> */}
 
       {/* Footer Section */}
-      <section id="Footer" className="scroll-mt-20">
+      <section id="Contact" className="scroll-mt-20">
         <Suspense fallback={<LoadingScreen />}>
           <Footer />
         </Suspense>
@@ -103,3 +103,4 @@ export default function Page() {
     </div>
   );
 }
+

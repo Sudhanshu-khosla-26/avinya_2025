@@ -82,7 +82,7 @@ const Event = () => {
             description: "Engineer autonomous robots to compete in challenging obstacle courses. Teams of 2-4 members showcase robotics.",
             timing: "01:00 PM",
             venue: "Mar 08-10, 2025",
-            imageUrl: "/bug_smash.webp",
+            imageUrl: "/BUG-SMASH.webp",
             RegistrationLink: "https://docs.google.com/forms/d/e/1FAIpQLScjHJMKI_zdWGZzgJz3Qz8oiK6sRrDhATQIrSOM2cpSwKRPKw/viewform"
         },
     ];

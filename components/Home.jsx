@@ -11,7 +11,7 @@ const Home = () => {
         <div className="relative  min-h-[100svh] overflow-hidden">
 
             {/* Background */}
-            <div className="absolute inset-0 -z-10 bg-[#09011A]">
+            <div className="absolute inset-0 z-0 bg-[#09011A]">
                 <LiquidEther
                     colors={["#5227FF", "#FF9FFC", "#B19EEF"]}
                     mouseForce={20}
@@ -65,7 +65,7 @@ const Home = () => {
                         <h2 className="text-2xl md:text-3xl lg:text-4xl mx-auto text-[#FFD400] rokkitt-regular">October 13, 2025</h2>
 
                         <a
-                            href="#"
+                            href="#Event"
                             aria-label="Register yourself to the event"
                             className="mt-8 w-fit p-3 md:p-4 md:px-10 px-6 rounded-full text-white animate-bounce mx-auto font-bold bg-white/5 shadow-lg backdrop-blur-md border border-white/50 hover:scale-105 transform transition duration-300 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#09011A]"
                         >

@@ -90,9 +90,11 @@ const Header = () => {
                 >
                     <ul className="flex flex-col gap-3 px-4 py-3 text-base font-serif">
                         {NAV_ITEMS.map((item) => (
-                            <li key={item} className="py-1 cursor-pointer hover:text-gray-300" onClick={() => setOpen(false)}>
-                                {item}
-                            </li>
+                            <Link href={`#${item}`}>
+                                <li key={item} className="py-1 cursor-pointer hover:text-gray-300" onClick={() => setOpen(false)}>
+                                    {item}
+                                </li>
+                            </Link>
                         ))}
                     </ul>
                 </div>
