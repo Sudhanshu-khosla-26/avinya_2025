@@ -8,16 +8,33 @@ export default function SmoothScrolling({ children }) {
             duration: 1.2,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             smooth: true,
-            smoothTouch: false, // Important for mobile!
+            smoothTouch: false,
         });
 
+        // RAF loop
         function raf(time) {
             lenis.raf(time);
             requestAnimationFrame(raf);
         }
         requestAnimationFrame(raf);
 
-        return () => lenis.destroy();
+        // Handle anchor clicks smoothly
+        const handleAnchorClick = (e) => {
+            const target = e.target.closest("a[href^='#']");
+            if (target) {
+                e.preventDefault();
+                const id = target.getAttribute("href").slice(1);
+                const el = document.getElementById(id);
+                if (el) lenis.scrollTo(el);
+            }
+        };
+
+        document.addEventListener("click", handleAnchorClick);
+
+        return () => {
+            lenis.destroy();
+            document.removeEventListener("click", handleAnchorClick);
+        };
     }, []);
 
     return <>{children}</>;

@@ -1,13 +1,14 @@
 "use client"
 import dynamic from 'next/dynamic';
-import { Suspense } from 'react';
-import LoadingScreen from "@/components/LoadingScreen";
+// import { Suspense } from 'react';
+import LazySection from '@/components/LazySection';
+import LoadingScreen from '@/components/LoadingScreen';
 
 // Lazy load components with dynamic imports
 const Home = dynamic(() => import('@/components/Home'), {
-  loading: () => <LoadingScreen />,
-  ssr: true, // Enable SSR for better SEO
+  ssr: true,
 });
+
 
 const About = dynamic(() => import('@/components/About'), {
   loading: () => <LoadingScreen />,
@@ -25,6 +26,11 @@ const SponsorCarousel = dynamic(() => import('@/components/SponsorshipPage'), {
 });
 
 const Gallery = dynamic(() => import('@/components/Gallery.jsx'), {
+  loading: () => <LoadingScreen />,
+  ssr: false,
+});
+
+const Timeline = dynamic(() => import('@/components/Timeline.jsx'), {
   loading: () => <LoadingScreen />,
   ssr: false,
 });
@@ -51,54 +57,60 @@ export default function Page() {
     <div className="min-h-screen overflow-x-hidden bg-[#09011A]">
       {/* Home Section */}
       <section id="Home" className="scroll-mt-20">
-        <Suspense fallback={<LoadingScreen />}>
-          <Home />
-        </Suspense>
+        <Home />
       </section>
 
       {/* <BlurDivider /> */}
 
       {/* About Section */}
       <section id="About" className="scroll-mt-20">
-        <Suspense fallback={<LoadingScreen />}>
-          <About />
-        </Suspense>
+        {/* <Suspense fallback={<LoadingScreen />}> */}
+        <About />
+        {/* </Suspense> */}
       </section>
 
       {/* <BlurDivider /> */}
 
       {/* Event Section */}
       <section id="Event" className="scroll-mt-20">
-        <Suspense fallback={<LoadingScreen />}>
+        {/* <Suspense fallback={<LoadingScreen />}> */}
+        <LazySection>
           <Event />
-        </Suspense>
+        </LazySection>
+        {/* </Suspense> */}
       </section>
       {/* 
       <BlurDivider /> */}
 
       {/* Sponsors Section */}
       <section id="Sponsors" className="scroll-mt-20">
-        <Suspense fallback={<LoadingScreen />}>
+        <LazySection>
           <SponsorCarousel />
-        </Suspense>
+        </LazySection>
       </section>
+
+      {/* <section id="Timeline" className="scroll-mt-20">
+        <LazySection>
+          <Timeline />
+        </LazySection>
+      </section> */}
 
       {/* <BlurDivider /> */}
 
       {/* Gallery Section */}
       <section id="Gallery" className="scroll-mt-20">
-        <Suspense fallback={<LoadingScreen />}>
+        <LazySection>
           <Gallery />
-        </Suspense>
+        </LazySection>
       </section>
 
       {/* <BlurDivider /> */}
 
       {/* Footer Section */}
       <section id="Contact" className="scroll-mt-20">
-        <Suspense fallback={<LoadingScreen />}>
+        <LazySection>
           <Footer />
-        </Suspense>
+        </LazySection>
       </section>
     </div>
   );
