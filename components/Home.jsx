@@ -38,19 +38,19 @@ const Home = () => {
                     <div className="order-2 md:order-1 w-full flex items-center justify-center ">
                         <div className="group relative w-full max-w-[520px] md:max-w-[640px] lg:max-w-[720px] h-[300px] sm:h-[380px] md:h-[460px] lg:h-[600px] lg:mt-24 mt-0">
                             <div className="absolute inset-0 rounded-full transition duration-500 opacity-0 group-hover:opacity-100 right-20 blur-2xl bg-purple-500/40"></div>
-                        
+
                             <Spline
                                 className="absolute inset-0 pl-12 lg:pl-0 "
                                 style={{ width: "100%", height: "100%" }}
                                 scene="https://prod.spline.design/gsE8xu03UCTC4KFO/scene.splinecode"
                             />
-                          
+
                         </div>
                     </div>
 
                     {/* Text content */}
-                    <div className="order-1 md:order-2  flex flex-col items-center md:items-start md:mt-14 ">
-                        <div className="mx-auto animate-pulse duration-400 w-fit px-4 py-1 my-4 md:my-0 flex items-center text-white bg-white/5 rounded-full shadow-lg backdrop-blur-md border border-white/50">
+                    <div className="order-1 relative right-0 md:right-[100px] lg:right-[80px] md:order-2  flex flex-col items-center md:items-start md:mt-14 ">
+                        <div className="mx-auto animate-pulse duration-300 w-fit px-4 py-1 my-4 md:my-0 flex items-center text-white bg-white/5 rounded-full shadow-lg backdrop-blur-md border border-white/50">
                             <span className="text-sm text-muted-foreground">Inter-College Tech Fest 2025</span>
                         </div>
 

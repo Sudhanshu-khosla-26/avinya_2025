@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+
 const NAV_ITEMS = ["Home", "About", "Gallery", "Event", "Timeline", "Contact"]
 
 const Header = () => {
@@ -37,12 +38,14 @@ const Header = () => {
                 <div className="mx-auto w-fit flex px-8 py-2 items-center justify-between gap-16 bg-white/5 rounded-full shadow-lg backdrop-blur-md border border-white/50">
                     <div className="font-bold text-lg leading-11 flex items-center gap-2">
                         <img src="/logo.png" className="w-12 h-12" alt="" />
-                        Guru Tegh Bahadur 4th Centenary Engineering College
+                        <span className="hidden xl:inline">Guru Tegh Bahadur 4th Centenary Engineering College</span>
+                        <span className="xl:hidden">GTB4CEC</span>
                     </div>
                     <ul className="flex items-center gap-6 text-lg font-serif">
                         {NAV_ITEMS.map((item) => (
-                            <Link key={item} href={`#${item}`}>
+                            <Link href={`#${item}`}>
                                 <li
+                                    key={item}
                                     className="cursor-pointer hover:text-gray-300 relative before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-0 before:h-[2px] before:bg-white before:transition-all before:duration-300 hover:before:w-full after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-gradient-to-r after:from-[#b3b3b3] after:to-[#bc89ff] after:opacity-0 hover:after:opacity-100 after:transition-all after:duration-300 px-1"
                                 >
                                     {item}
