@@ -1,14 +1,10 @@
-// app/page.js
+
 "use client";
 
 import { useState, useEffect, Suspense, memo } from "react";
 import dynamic from "next/dynamic";
 
-// ====================================================================
-// 1. Splash Loader: UPGRADED Robot Smash Animation
-// ====================================================================
 
-// Helper SVG for the Robots (Now with Arms!)
 const Robot = ({ className, color }) => (
   <svg
     viewBox="0 0 50 70"
@@ -128,9 +124,7 @@ const SplashLoader = memo(({ onFinish }) => {
 
 SplashLoader.displayName = "SplashLoader";
 
-// ====================================================================
-// 2. Micro Loader: Bottom Right with Rotating Parts
-// ====================================================================
+
 function MicroLoader() {
   return (
     <div className="fixed bottom-5 right-5 z-40">
@@ -141,9 +135,7 @@ function MicroLoader() {
   );
 }
 
-// ====================================================================
-// 3. Dynamic Component Imports
-// ====================================================================
+
 const Home = dynamic(() => import("@/components/Home"));
 const About = dynamic(() => import("@/components/About"));
 const Event = dynamic(() => import("@/components/Event"));
@@ -152,9 +144,7 @@ const Gallery = dynamic(() => import("@/components/Gallery.jsx"));
 const Timeline = dynamic(() => import("@/components/Timeline.jsx"));
 const Footer = dynamic(() => import("@/components/Footer.jsx"));
 
-// ====================================================================
-// 4. Main Page Component
-// ====================================================================
+
 export default function Page() {
   const [isSplashActive, setIsSplashActive] = useState(true);
 

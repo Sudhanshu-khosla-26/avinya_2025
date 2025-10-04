@@ -14,7 +14,7 @@ const contacts = [
         image: "/harsh.jpg", // replace with your image path
     },
     {
-        name: "Kritika Sharma",
+        name: "Kritika Ahuja",
         number: "+91 8595862608",
         image: "/capybara.jpg", // Place in /public folder
     },

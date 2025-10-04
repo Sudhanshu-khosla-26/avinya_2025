@@ -6,79 +6,93 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import BlurText from "./BlurText";
 
-// Timeline data
 const timeline = [
     {
-        title: "CREATE-A-SCENE",
-        timing: "10:30 AM – 12:30 PM",
-        venue: "EG LAB, MMS Block",
-        description:
-            "Scientific Poster Making Competition under Avinya Tech Fest, organized by The Empirical Society.",
+        title: "REGISTRATION",
+        timing: "9:30 AM",
+        venue: "MMS BLOCK",
+        description: "Participants register for Avinya 2025 and collect their event kits.",
+    },
+    {
+        title: "INAUGURATION",
+        timing: "10:00 AM",
+        venue: "COMPUTER CENTRE",
+        description: "Official inauguration of Avinya 2025 by the dignitaries and college authorities.",
     },
     {
         title: "THINK TANK",
         timing: "10:30 AM",
-        venue: "CC LAB, MMS BLOCK",
-        description:
-            "A Platform for Visionary Ideas where creativity meets technology through structured presentations.",
+        venue: "COMPUTER CENTRE",
+        description: "A platform for visionary ideas where creativity meets technology through structured presentations.",
+    },
+    {
+        title: "CREATE-A-SCENE",
+        timing: "10:30 AM",
+        venue: "EG-1",
+        description: "Scientific Poster Making Competition under Avinya Tech Fest, organized by The Empirical Society.",
+    },
+    {
+        title: "AI CREATIVE CLASH",
+        timing: "10:30 AM",
+        venue: "CM LAB",
+        description: "Unleash your creativity with AI! Compete to design innovative, fun, and out-of-the-box AI-driven projects.",
+    },
+    {
+        title: "INNO-VISTA",
+        timing: "11:00 AM",
+        venue: "DLCD-2 LAB",
+        description: "An innovation challenge for UG and PG students to develop real-world impactful projects across multiple domains.",
     },
     {
         title: "THINK BYTE",
         timing: "11:00 AM",
-        venue: "IT LAB, MMS BLOCK",
-        description:
-            "Test your tech knowledge in this thrilling quiz showdown with 3 fast-paced rounds.",
-    },
-    {
-        title: "INNOVISTA",
-        timing: "11:00 AM",
-        venue: "DLCD LAB",
-        description:
-            "An innovation challenge for UG and PG students to develop real-world impactful projects across multiple domains.",
+        venue: "IT LAB",
+        description: "Test your tech knowledge in this thrilling quiz showdown with 3 fast-paced rounds.",
     },
     {
         title: "TALK TACT",
-        timing: "11:30 AM - 2:00 PM",
-        venue: "EG-2 LAB",
-        description:
-            "A debate competition that challenges participants to think critically and argue persuasively.",
+        timing: "11:30 AM",
+        venue: "EG-2",
+        description: "A debate competition that challenges participants to think critically and argue persuasively.",
     },
     {
         title: "TECH TADKA",
         timing: "12:00 PM",
-        venue: "R1, MMS Block",
-        description:
-            "A fun blend of food & innovation where participants bring homemade dishes with a tech twist!",
-    },
-    {
-        title: "CYPHER",
-        timing: "12:30 PM",
-        venue: "CM LAB, MMS BLOCK",
-        description:
-            "A prompt injection competition! Test your skills by crafting clever inputs to outsmart AI systems.",
+        venue: "R-1 ROOM",
+        description: "A fun blend of food & innovation where participants bring homemade dishes with a tech twist!",
     },
     {
         title: "E-SCRAP CANVAS",
         timing: "12:30 PM",
-        venue: "DLCD LAB",
-        description:
-            "Create artwork using old/obsolete electronics. Transform e-waste into artistic masterpieces.",
+        venue: "DLCD-1 LAB",
+        description: "Create artwork using old/obsolete electronics. Transform e-waste into artistic masterpieces.",
+    },
+    {
+        title: "CYPHER",
+        timing: "12:30 PM",
+        venue: "CM LAB",
+        description: "A prompt injection competition! Test your skills by crafting clever inputs to outsmart AI systems.",
     },
     {
         title: "BUG SMASH",
         timing: "12:30 PM",
-        venue: "IT LAB, MMS BLOCK",
-        description:
-            "Find the Bug. Fix the Code. Claim the Glory. The ultimate debugging battlefield.",
+        venue: "IT LAB",
+        description: "Find the Bug. Fix the Code. Claim the Glory. The ultimate debugging battlefield.",
     },
     {
-        title: "AI CREATIVE CLASH",
-        timing: "2:00 PM",
-        venue: "CM LAB, MMS BLOCK",
-        description:
-            "Unleash your creativity with AI! Compete to design innovative, fun, and out-of-the-box AI-driven projects.",
+        title: "RESULT, PRIZES & CERTIFICATE DISTRIBUTION",
+        timing: "2:30 PM",
+        venue: "COMPUTER CENTRE",
+        description: "Winners announced and certificates distributed for all competitions.",
+    },
+    {
+        title: "CLOSING OF AVINYA 2025",
+        timing: "5:00 PM",
+        venue: "----",
+        description: "Official closing ceremony marking the end of Avinya 2025.",
     },
 ];
+
 
 const TimelineCard = ({ event }) => (
     <VerticalTimelineElement
