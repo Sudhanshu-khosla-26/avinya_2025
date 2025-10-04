@@ -4,7 +4,6 @@ import Footer from "@/components/Footer"
 
 const EventDetailsPage = ({ params }) => {
     const { id } = params
-
     const Events = [
         {
             title: "TECH TADKA",
@@ -121,7 +120,58 @@ const EventDetailsPage = ({ params }) => {
             RegistrationLink:
                 "https://docs.google.com/forms/d/e/1FAIpQLSepSnEhB-GjwWblLv792Rp5p_BvVuC8QfpRleCInEddLiByJQ/viewform?usp=header",
         },
-    ]
+        {
+            title: "AVINYA 2025 - Open Innovation Challenge",
+            description: "An innovation challenge for UG and PG students to develop real-world impactful projects across multiple domains.",
+            Guidelines: "Projects must be original and innovative. Use of open-source tools is allowed with proper citation. Unsafe or unethical prototypes are not permitted.",
+            Topic: "Digital Inclusion & Accessibility, Next-Gen Mobility & Smart Transportation, Space & Frontier Tech, Cybersecurity & Digital Trust, Healthcare & Biotechnology, Women in Tech: Innovation for Empowerment, Open Innovation (Tech for Impact)",
+            Rounds: "Single round of project demonstration: 7-minute presentation + 2-minute Q&A.",
+            Criteria: "Innovation (20), Practical Impact (20), Technical Feasibility (20), Presentation (20), Sustainability (20)",
+            instructions: "Teams of 1–4 members; individuals allowed. Submit title, abstract (≤200 words), slides (≤10), and Declaration of Originality. Bring valid college ID at check-in.",
+            summary: "Innovative project challenge promoting impactful solutions across technology, healthcare, space, and sustainability domains.",
+            timing: "10:00 AM – 4:00 PM",
+            venue: "DLCD LAB",
+            imageUrl: "/innovista.webp",
+            RegistrationLink: "https://docs.google.com/forms/d/1d2oULg-mrXfg-yH-XUMi1w_nAxIoVZjprvXV8N6VQPw/edit",
+        },
+        {
+            title: "BUG SMASH",
+            description:
+                "Find the Bug. Fix the Code. Claim the Glory. The ultimate debugging battlefield where every bug you squash brings you closer to glory!",
+            Guidelines:
+                "Individual participation only.\nNo gadgets – mobiles, laptops, or internet.\nTime-bound – late answers will not be considered.\nOnly fully correct fixes earn points.\nNeat writing only – unclear code = zero marks.\nQuestions displayed on projector one at a time.\nAnswer on A4 sheet – neat, clear, and precise.",
+            Topic: "Debugging challenges across programming languages",
+            Rounds: "3 rounds of debugging – each tougher than the last. Tie-breaker: Rapid-Fire Debugging Round.",
+            Criteria:
+                "Normal Bug Fix → +5 points\nTricky Bug Fix → +10 points\nWrong Fix → –5 points\nSpeed and accuracy determine winners.",
+            instructions:
+                "This isn't just about coding – it's about thinking faster, spotting smarter, and fixing sharper. Every question hides a bug. Every fix proves your brilliance.",
+            summary:
+                "A thrilling debugging competition where sharp-eyed coders battle to find and fix bugs under time pressure.",
+            timing: "12:30 PM",
+            venue: "IT LAB, MMS BLOCK",
+            imageUrl: "/BUG-SMASH.webp",
+            RegistrationLink: "TBA",
+        },
+        {
+            title: "THINK TANK",
+            description:
+                "A Platform for Visionary Ideas. Join us where creativity meets technology and present your transformative ideas through a structured PowerPoint showcase.",
+            Guidelines:
+                "Submit abstracts by 11th October 2025.\nFile format: Word document (.doc or .docx).\nMaximum length: 150 words (including title, team/individual name, and college affiliation).\nAbstracts uploaded through Google Form.\nOnly 15 participants or teams (1–3 members per team) will be selected.\nUse official 8-slide presentation template (no modifications allowed).\n6 minutes for presentation and 2 minutes for Q&A.",
+            Topic: "Topics relevant to today's scientific and technological landscape",
+            Rounds: "Single round presentation after abstract selection",
+            Criteria: "Selection based on quality and clarity of submitted abstract. Presentation judged on content, delivery, and innovation.",
+            instructions:
+                "Participants must convey their insights and solutions on relevant scientific and technological topics. Selected participants will present using the official template.",
+            summary:
+                "A platform where visionaries present transformative ideas on science and technology through structured presentations.",
+            timing: "TBA",
+            venue: "TBA",
+            imageUrl: "/think_tank.webp",
+            RegistrationLink: "TBA",
+        },
+    ];
 
     const event = Events[id]
 
@@ -136,20 +186,24 @@ const EventDetailsPage = ({ params }) => {
     return (
         <>
             <div className="min-h-screen py-20 bg-slate-950">
-                <div className="pt-16 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
+                <div className="pt-12 md:pt-16 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
                     {/* Hero Section */}
                     <div className="mb-12">
-                        <div className="flex flex-row relative items-center gap-8 mb-8">
+                        <div className="flex flex-col md:flex-row relative items-center gap-8 mb-8">
                             {/* Compact Image */}
-                            <div className="w-full max-w-sm sticky self-start top-36">
-                                <div className="relative  rounded-2xl overflow-hidden border border-slate-800 shadow-xl">
+                            <div className="w-full max-w-sm block mx-auto md:mx-0 md:sticky self-start md:top-36">
+                                <div className="relative z-10  rounded-2xl overflow-hidden border border-slate-800 shadow-xl">
                                     <img
                                         src={event.imageUrl}
                                         alt={event.title}
                                         className="w-full h-full max-h-[460px] object-fill"
                                     />
+
                                 </div>
+                                <div className="absolute -inset-2 bg-gradient-to-r from-purple-600/30 to-pink-500/30  blur-2xl opacity-100 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-500"></div>
+
                             </div>
+
 
                             {/* Content */}
                             <div className="text-center space-y-6 max-w-3xl">
@@ -173,20 +227,20 @@ const EventDetailsPage = ({ params }) => {
 
                                 {/* CTA */}
                                 <a href={event.RegistrationLink} target="_blank" rel="noopener noreferrer" className="inline-block">
-                                    <button className="px-8 py-4 border border-slate-800 rounded-xl text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-blue-500/25 transition-all duration-200 transform hover:scale-105 active:scale-95">
+                                    <button className="px-8 py-4 border border-white/10 bg-white/5 rounded-xl text-white font-semibold text-lg shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 active:scale-95">
                                         Register Now
                                     </button>
                                 </a>
                                 <div className="max-w-4xl mx-auto space-y-6 ">
                                     {/* About */}
-                                    <div className=" border border-slate-800 rounded-2xl p-6 md:p-8">
+                                    <div className="border border-slate-800 rounded-2xl p-6 md:p-8 hover:border-slate-700 hover:shadow-lg hover:shadow-slate-800/50 transition-all   hover:-translate-y-1  duration-300">
                                         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">About</h2>
                                         <p className="text-slate-300 leading-relaxed">{event.description}</p>
                                     </div>
 
                                     {/* Topic */}
                                     {event.Topic && (
-                                        <div className=" border border-slate-800 rounded-2xl p-6 md:p-8">
+                                        <div className="border border-slate-800 rounded-2xl p-6 md:p-8 hover:border-slate-700 hover:shadow-lg hover:shadow-slate-800/50 transition-all hover:-translate-y-1 duration-300">
                                             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Topic</h2>
                                             <p className="text-slate-300 leading-relaxed">{event.Topic}</p>
                                         </div>
@@ -194,14 +248,14 @@ const EventDetailsPage = ({ params }) => {
 
                                     {/* Guidelines */}
                                     {event.Guidelines && (
-                                        <div className=" border border-slate-800 rounded-2xl p-6 md:p-8">
+                                        <div className="border border-slate-800 rounded-2xl p-6 md:p-8 hover:border-slate-700 hover:shadow-lg hover:shadow-slate-800/50 transition-all hover:-translate-y-1 duration-300">
                                             <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Guidelines</h2>
                                             <ul className="space-y-3">
                                                 {event.Guidelines.split("\n")
                                                     .filter((line) => line.trim())
                                                     .map((line, idx) => (
-                                                        <li key={idx} className="text-slate-300 leading-relaxed flex gap-3">
-                                                            <span className="text-blue-500 mt-1.5 flex-shrink-0">•</span>
+                                                        <li key={idx} className="text-slate-300 leading-relaxed flex items-start gap-3 hover:text-white transition-colors duration-200">
+                                                            <span className="text-blue-500 flex-shrink-0 text-xl leading-none">•</span>
                                                             <span>{line}</span>
                                                         </li>
                                                     ))}
@@ -211,7 +265,7 @@ const EventDetailsPage = ({ params }) => {
 
                                     {/* Rounds */}
                                     {event.Rounds && (
-                                        <div className="border border-slate-800 rounded-2xl p-6 md:p-8">
+                                        <div className="border border-slate-800 rounded-2xl p-6 md:p-8 hover:border-slate-700 hover:shadow-lg hover:shadow-slate-800/50 hover:-translate-y-1 transition-all duration-300">
                                             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Rounds</h2>
                                             <p className="text-slate-300 leading-relaxed">{event.Rounds}</p>
                                         </div>
@@ -219,7 +273,7 @@ const EventDetailsPage = ({ params }) => {
 
                                     {/* Criteria */}
                                     {event.Criteria && (
-                                        <div className=" border border-slate-800 rounded-2xl p-6 md:p-8">
+                                        <div className="border border-slate-800 rounded-2xl p-6 md:p-8 hover:border-slate-700 hover:shadow-lg hover:shadow-slate-800/50 hover:-translate-y-1 transition-all duration-300">
                                             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Judging Criteria</h2>
                                             <p className="text-slate-300 leading-relaxed">{event.Criteria}</p>
                                         </div>
@@ -227,15 +281,15 @@ const EventDetailsPage = ({ params }) => {
 
                                     {/* Instructions */}
                                     {event.instructions && (
-                                        <div className="border border-slate-800 rounded-2xl p-6 md:p-8">
+                                        <div className="border border-slate-800 rounded-2xl p-6 md:p-8 hover:border-slate-700 hover:shadow-lg hover:shadow-slate-800/50 hover:-translate-y-1 transition-all duration-300">
                                             <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Instructions</h2>
                                             <ul className="space-y-3">
                                                 {event.instructions
                                                     .split("\n")
                                                     .filter((line) => line.trim())
                                                     .map((line, idx) => (
-                                                        <li key={idx} className="text-slate-300 leading-relaxed flex gap-3">
-                                                            <span className="text-blue-500 mt-1.5 flex-shrink-0">•</span>
+                                                        <li key={idx} className="text-slate-300 leading-relaxed flex items-start gap-3 hover:text-white transition-colors duration-200">
+                                                            <span className="text-blue-500 flex-shrink-0 text-xl leading-none">•</span>
                                                             <span>{line}</span>
                                                         </li>
                                                     ))}
@@ -245,14 +299,14 @@ const EventDetailsPage = ({ params }) => {
 
                                     {/* Defensive Checklist */}
                                     {event.DefensiveChecklist && (
-                                        <div className="border border-slate-800 rounded-2xl p-6 md:p-8">
+                                        <div className="border border-slate-800 rounded-2xl p-6 md:p-8 hover:border-slate-700 hover:shadow-lg hover:-translate-y-1 hover:shadow-slate-800/50 transition-all duration-300">
                                             <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">Security Guidelines</h2>
                                             <ul className="space-y-3">
                                                 {event.DefensiveChecklist.split("\n")
                                                     .filter((line) => line.trim())
                                                     .map((line, idx) => (
-                                                        <li key={idx} className="text-slate-300 leading-relaxed flex gap-3">
-                                                            <span className="text-blue-500 mt-1.5 flex-shrink-0">•</span>
+                                                        <li key={idx} className="text-slate-300 leading-relaxed flex items-start gap-3 hover:text-white transition-colors duration-200">
+                                                            <span className="text-blue-500 flex-shrink-0 text-xl leading-none">•</span>
                                                             <span>{line}</span>
                                                         </li>
                                                     ))}

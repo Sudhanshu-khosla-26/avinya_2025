@@ -1,13 +1,13 @@
 "use client";
 import Link from "next/link";
 
-const EventCard = ({ title, description, timing, venue, imageUrl, RegistrationLink }) => {
+const EventCard = ({ title, description, timing, venue, imageUrl, RegistrationLink, index }) => {
     return (
         <div className="relative h-[380px] sm:h-[400px] md:h-[21.5rem] w-full max-w-[280px] sm:max-w-[280px] mx-auto">
             {/* Mobile Card - Simple, No Flip */}
             <div className="absolute -inset-2 bg-gradient-to-r from-purple-600/30 to-pink-500/30 sm:hidden blur-2xl opacity-100 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-500"></div>
 
-            <Link href={RegistrationLink} target="_blank" passHref className="sm:hidden">
+            <Link href={`/events/${index}`} passHref className="sm:hidden">
                 <div className="mobile-card relative w-full h-full border-2 border-purple-500/40 overflow-hidden shadow-2xl bg-gradient-to-br from-slate-950 via-purple-950/50 to-slate-950 active:scale-[0.98] transition-transform duration-200">
                     {/* Glow on active */}
                     <div className="absolute -inset-2 bg-gradient-to-r from-purple-600/30 to-pink-500/30 blur-xl opacity-0 active:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
@@ -94,6 +94,11 @@ const EventCard = ({ title, description, timing, venue, imageUrl, RegistrationLi
                                 </div>
                             </div>
                         </div>
+                        <Link href={`/events/${index}`} passHref>
+                            <button className="w-full mt-4 cursor-pointer bg-white/10 text-gray-200 font-bold py-2.5 sm:py-3 px-4 rounded-lg shadow-lg hover:shadow-white/30 transition-all duration-300 transform hover:scale-105 active:scale-95 text-xs sm:text-sm">
+                                Read More 📜
+                            </button>
+                        </Link>
                         <Link href={RegistrationLink} target="_blank" passHref>
                             <button className="w-full mt-4 cursor-pointer bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black font-bold py-2.5 sm:py-3 px-4 rounded-lg shadow-lg hover:shadow-yellow-500/50 transition-all duration-300 transform hover:scale-105 active:scale-95 text-xs sm:text-sm">
                                 Register Now 🚀
