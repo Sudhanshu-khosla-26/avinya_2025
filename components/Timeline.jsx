@@ -1,183 +1,151 @@
-"use client"
-import { useState } from 'react';
-import { Clock, MapPin } from 'lucide-react';
+import React from "react";
+import {
+    VerticalTimeline,
+    VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import BlurText from "./BlurText";
 
-export default function Timeline() {
-    const [hoveredIndex, setHoveredIndex] = useState(null);
+// Timeline data
+const timeline = [
+    {
+        title: "CREATE-A-SCENE",
+        timing: "10:30 AM – 12:30 PM",
+        venue: "EG LAB, MMS Block",
+        description:
+            "Scientific Poster Making Competition under Avinya Tech Fest, organized by The Empirical Society.",
+    },
+    {
+        title: "THINK TANK",
+        timing: "10:30 AM",
+        venue: "CC LAB, MMS BLOCK",
+        description:
+            "A Platform for Visionary Ideas where creativity meets technology through structured presentations.",
+    },
+    {
+        title: "THINK BYTE",
+        timing: "11:00 AM",
+        venue: "IT LAB, MMS BLOCK",
+        description:
+            "Test your tech knowledge in this thrilling quiz showdown with 3 fast-paced rounds.",
+    },
+    {
+        title: "INNOVISTA",
+        timing: "11:00 AM",
+        venue: "DLCD LAB",
+        description:
+            "An innovation challenge for UG and PG students to develop real-world impactful projects across multiple domains.",
+    },
+    {
+        title: "TALK TACT",
+        timing: "11:30 AM - 2:00 PM",
+        venue: "EG-2 LAB",
+        description:
+            "A debate competition that challenges participants to think critically and argue persuasively.",
+    },
+    {
+        title: "TECH TADKA",
+        timing: "12:00 PM",
+        venue: "R1, MMS Block",
+        description:
+            "A fun blend of food & innovation where participants bring homemade dishes with a tech twist!",
+    },
+    {
+        title: "CYPHER",
+        timing: "12:30 PM",
+        venue: "CM LAB, MMS BLOCK",
+        description:
+            "A prompt injection competition! Test your skills by crafting clever inputs to outsmart AI systems.",
+    },
+    {
+        title: "E-SCRAP CANVAS",
+        timing: "12:30 PM",
+        venue: "DLCD LAB",
+        description:
+            "Create artwork using old/obsolete electronics. Transform e-waste into artistic masterpieces.",
+    },
+    {
+        title: "BUG SMASH",
+        timing: "12:30 PM",
+        venue: "IT LAB, MMS BLOCK",
+        description:
+            "Find the Bug. Fix the Code. Claim the Glory. The ultimate debugging battlefield.",
+    },
+    {
+        title: "AI CREATIVE CLASH",
+        timing: "2:00 PM",
+        venue: "CM LAB, MMS BLOCK",
+        description:
+            "Unleash your creativity with AI! Compete to design innovative, fun, and out-of-the-box AI-driven projects.",
+    },
+];
 
-    const timeline = [
-        {
-            title: "Opening Ceremony",
-            timing: "09:00 AM - 10:00 AM",
-            venue: "Main Auditorium"
-        },
-        {
-            title: "Keynote Speech",
-            timing: "10:00 AM - 11:00 AM",
-            venue: "Conference Hall A"
-        },
-        {
-            title: "Workshop Session 1",
-            timing: "11:30 AM - 01:00 PM",
-            venue: "Tech Lab 101"
-        },
-        {
-            title: "Networking Lunch",
-            timing: "01:00 PM - 02:00 PM",
-            venue: "Cafeteria"
-        },
-        {
-            title: "Panel Discussion",
-            timing: "02:30 PM - 04:00 PM",
-            venue: "Conference Hall B"
-        },
-        {
-            title: "Closing Ceremony",
-            timing: "04:30 PM - 05:30 PM",
-            venue: "Main Auditorium"
+const TimelineCard = ({ event }) => (
+    <VerticalTimelineElement
+        contentStyle={{
+            background: "transparent",
+            padding: "0",
+            border: "none",
+            boxShadow: "none",
+        }}
+        contentArrowStyle={{ borderRight: "7px solid transparent" }}
+        date={event.timing}
+        dateClassName="!text-white font-semibold"
+        iconStyle={{ background: "#1d1836", boxShadow: "0 0 15px rgba(89,54,229,0.6)" }}
+        icon={
+            <div className="flex justify-center items-center w-full h-full">
+                <img
+                    src="/clock.png"
+                    alt="clock"
+                    className="w-[60%] h-[60%] invert object-contain transition-transform duration-500 group-hover:rotate-180"
+                />
+            </div>
         }
-    ];
+    >
+        {/* Card with hover effects */}
+        <div className="group relative bg-[#1d1836] p-6 rounded-2xl transition-all duration-500 
+                      
+                        hover:shadow-[0_0_20px_rgba(217,102,255,0.7)] hover:-translate-y-2">
+            <h3 className="text-white text-[22px] font-bold transition-colors duration-300 group-hover:text-yellow-300">
+                {event.title}
+            </h3>
+            <p className="text-gray-400 text-[15px] font-semibold m-0 group-hover:text-gray-200">
+                {event.venue}
+            </p>
+            <p className="mt-3 text-gray-300 text-[14px] tracking-wide group-hover:text-white">
+                {event.description}
+            </p>
 
+            {/* Glow border effect */}
+            <div className="absolute inset-0 rounded-2xl border border-transparent 
+                            group-hover:border-white/30 group-hover:shadow-[0_0_25px_rgba(217,102,255,0.6)] 
+                            transition-all duration-500 pointer-events-none"></div>
+        </div>
+    </VerticalTimelineElement>
+);
+
+const Timeline = () => {
     return (
-        <div className="min-h-screen bg-black text-white py-20 px-4 relative overflow-hidden">
-            {/* Animated background */}
-            <div className="absolute inset-0 opacity-5">
-                <div className="absolute inset-0" style={{
-                    backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(139, 92, 246, 0.4) 1px, transparent 0)',
-                    backgroundSize: '50px 50px'
-                }}></div>
+        <div className="mt-20 flex flex-col">
+            <div className="relative px-10 w-full mb-6 sm:mb-8 lg:mb-12 text-white">
+                <BlurText
+                    text="Timeline"
+                    delay={150}
+                    animateBy="words"
+                    direction="top"
+                    className="text-2xl w-fit mx-auto lg:mx-0 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center lg:text-left"
+                />
+                {/* Underline decoration */}
+                <div className="mt-2 sm:mt-4 mx-auto lg:mx-0 w-32 sm:w-48 h-1 bg-gradient-to-r from-[#5936e5] via-[#d966ff] to-[#5936e5] rounded-full"></div>
             </div>
 
-            <div className="max-w-7xl mx-auto relative z-10">
-                {/* Header */}
-                <div className="text-center mb-20">
-                    <h2 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
-                        Event Timeline
-                    </h2>
-                    <p className="text-gray-400 text-lg">Follow the journey through our event</p>
-                </div>
-
-                {/* Timeline Container */}
-                <div className="relative">
-                    {/* Central Vertical Line */}
-                    <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full hidden md:block">
-                        <div className="absolute inset-0 bg-gradient-to-b from-purple-500/30 via-pink-500/30 to-purple-500/30"></div>
-                        {/* Animated glow on line */}
-                        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-2 h-32 bg-gradient-to-b from-purple-500 to-transparent blur-sm animate-pulse"></div>
-                    </div>
-
-                    {/* Timeline Items */}
-                    <div className="space-y-0">
-                        {timeline.map((item, index) => {
-                            const isLeft = index % 2 === 0;
-
-                            return (
-                                <div key={index} className="relative h-64 md:h-48">
-                                    {/* Desktop View */}
-                                    <div className="hidden md:block">
-                                        {/* Branch Line from center */}
-                                        <div
-                                            className={`absolute top-24 ${isLeft ? 'right-1/2 left-0' : 'left-1/2 right-0'
-                                                } h-0.5 transition-all duration-500`}
-                                            style={{
-                                                background: hoveredIndex === index
-                                                    ? 'linear-gradient(to ' + (isLeft ? 'left' : 'right') + ', rgba(168, 85, 247, 0.8), rgba(236, 72, 153, 0.8))'
-                                                    : 'rgba(75, 85, 99, 0.3)',
-                                                width: hoveredIndex === index ? 'calc(50% - 40px)' : 'calc(50% - 60px)',
-                                            }}
-                                        ></div>
-
-                                        {/* Center Node */}
-                                        <div
-                                            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 transition-all duration-500"
-                                            onMouseEnter={() => setHoveredIndex(index)}
-                                            onMouseLeave={() => setHoveredIndex(null)}
-                                        >
-                                            <div className={`relative transition-all duration-500 ${hoveredIndex === index ? 'scale-150' : 'scale-100'
-                                                }`}>
-                                                <div className={`w-5 h-5 rounded-full ${hoveredIndex === index
-                                                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg shadow-purple-500/50'
-                                                        : 'bg-purple-500/50 border-2 border-purple-400/30'
-                                                    }`}></div>
-                                                {hoveredIndex === index && (
-                                                    <div className="absolute inset-0 rounded-full bg-purple-500 animate-ping"></div>
-                                                )}
-                                            </div>
-                                        </div>
-
-                                        {/* Event Card */}
-                                        <div
-                                            className={`absolute top-1/2 transform -translate-y-1/2 ${isLeft ? 'right-1/2 mr-12' : 'left-1/2 ml-12'
-                                                } w-80`}
-                                            onMouseEnter={() => setHoveredIndex(index)}
-                                            onMouseLeave={() => setHoveredIndex(null)}
-                                        >
-                                            <div className={`relative transition-all duration-500 ${hoveredIndex === index ? 'scale-105 -translate-y-2' : 'scale-100'
-                                                }`}>
-                                                {/* Glow effect */}
-                                                {hoveredIndex === index && (
-                                                    <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-75"></div>
-                                                )}
-
-                                                {/* Card */}
-                                                <div className="relative bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-purple-500/50 transition-all duration-500">
-                                                    {/* Title */}
-                                                    <h3 className="text-2xl font-bold mb-3 text-white">
-                                                        {item.title}
-                                                    </h3>
-
-                                                    {/* Timing */}
-                                                    <div className="flex items-center gap-2 mb-2 text-purple-400">
-                                                        <Clock className="w-4 h-4" />
-                                                        <span className="text-sm font-medium">{item.timing}</span>
-                                                    </div>
-
-                                                    {/* Venue */}
-                                                    <div className="flex items-center gap-2 text-pink-400">
-                                                        <MapPin className="w-4 h-4" />
-                                                        <span className="text-sm font-medium">{item.venue}</span>
-                                                    </div>
-
-                                                    {/* Accent line */}
-                                                    <div className={`absolute top-0 ${isLeft ? 'right-0' : 'left-0'} w-1 h-full bg-gradient-to-b from-purple-500 to-pink-500 rounded-r-lg transition-opacity duration-500 ${hoveredIndex === index ? 'opacity-100' : 'opacity-0'
-                                                        }`}></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Mobile View */}
-                                    <div className="md:hidden px-4">
-                                        <div
-                                            className="relative transition-all duration-500"
-                                            onMouseEnter={() => setHoveredIndex(index)}
-                                            onMouseLeave={() => setHoveredIndex(null)}
-                                        >
-                                            {hoveredIndex === index && (
-                                                <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg blur opacity-75"></div>
-                                            )}
-
-                                            <div className="relative bg-gray-900 border border-gray-800 rounded-lg p-6 mb-6">
-                                                <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>
-
-                                                <div className="flex items-center gap-2 mb-2 text-purple-400">
-                                                    <Clock className="w-4 h-4" />
-                                                    <span className="text-sm">{item.timing}</span>
-                                                </div>
-
-                                                <div className="flex items-center gap-2 text-pink-400">
-                                                    <MapPin className="w-4 h-4" />
-                                                    <span className="text-sm">{item.venue}</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
-            </div>
+            <VerticalTimeline>
+                {timeline.map((event, index) => (
+                    <TimelineCard key={index} event={event} />
+                ))}
+            </VerticalTimeline>
         </div>
     );
-}
+};
+
+export default Timeline;

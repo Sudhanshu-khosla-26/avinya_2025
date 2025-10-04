@@ -89,11 +89,11 @@ export default function Page() {
         </LazySection>
       </section>
 
-      {/* <section id="Timeline" className="scroll-mt-20">
+      <section id="Timeline" className="scroll-mt-20">
         <LazySection>
           <Timeline />
         </LazySection>
-      </section> */}
+      </section>
 
       {/* <BlurDivider /> */}
 

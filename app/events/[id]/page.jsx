@@ -4,6 +4,7 @@ import Footer from "@/components/Footer"
 
 const EventDetailsPage = ({ params }) => {
     const { id } = params
+
     const Events = [
         {
             title: "TECH TADKA",
@@ -46,7 +47,7 @@ const EventDetailsPage = ({ params }) => {
             summary:
                 "AI Creative Clash @ अvinya 2025 – where imagination meets AI! Compete with creativity, innovation & fun.",
             timing: "2:00 PM",
-            venue: "GTB4CEC",
+            venue: "CM LAB , MMS BLOCK",
             imageUrl: "/ai_creative_clash.webp",
             RegistrationLink: "https://forms.gle/N2RG3GH3YC63ov688",
         },
@@ -121,7 +122,7 @@ const EventDetailsPage = ({ params }) => {
                 "https://docs.google.com/forms/d/e/1FAIpQLSepSnEhB-GjwWblLv792Rp5p_BvVuC8QfpRleCInEddLiByJQ/viewform?usp=header",
         },
         {
-            title: "AVINYA 2025 - Open Innovation Challenge",
+            title: "INNOVISTA",
             description: "An innovation challenge for UG and PG students to develop real-world impactful projects across multiple domains.",
             Guidelines: "Projects must be original and innovative. Use of open-source tools is allowed with proper citation. Unsafe or unethical prototypes are not permitted.",
             Topic: "Digital Inclusion & Accessibility, Next-Gen Mobility & Smart Transportation, Space & Frontier Tech, Cybersecurity & Digital Trust, Healthcare & Biotechnology, Women in Tech: Innovation for Empowerment, Open Innovation (Tech for Impact)",
@@ -129,7 +130,7 @@ const EventDetailsPage = ({ params }) => {
             Criteria: "Innovation (20), Practical Impact (20), Technical Feasibility (20), Presentation (20), Sustainability (20)",
             instructions: "Teams of 1–4 members; individuals allowed. Submit title, abstract (≤200 words), slides (≤10), and Declaration of Originality. Bring valid college ID at check-in.",
             summary: "Innovative project challenge promoting impactful solutions across technology, healthcare, space, and sustainability domains.",
-            timing: "10:00 AM – 4:00 PM",
+            timing: "11:00 AM",
             venue: "DLCD LAB",
             imageUrl: "/innovista.webp",
             RegistrationLink: "https://docs.google.com/forms/d/1d2oULg-mrXfg-yH-XUMi1w_nAxIoVZjprvXV8N6VQPw/edit",
@@ -151,7 +152,7 @@ const EventDetailsPage = ({ params }) => {
             timing: "12:30 PM",
             venue: "IT LAB, MMS BLOCK",
             imageUrl: "/BUG-SMASH.webp",
-            RegistrationLink: "TBA",
+            RegistrationLink: "https://docs.google.com/forms/d/e/1FAIpQLScjHJMKI_zdWGZzgJz3Qz8oiK6sRrDhATQIrSOM2cpSwKRPKw/viewform",
         },
         {
             title: "THINK TANK",
@@ -166,10 +167,10 @@ const EventDetailsPage = ({ params }) => {
                 "Participants must convey their insights and solutions on relevant scientific and technological topics. Selected participants will present using the official template.",
             summary:
                 "A platform where visionaries present transformative ideas on science and technology through structured presentations.",
-            timing: "TBA",
-            venue: "TBA",
+            timing: "10:30 AM",
+            venue: "CC LAB, MMS BLOCK",
             imageUrl: "/think_tank.webp",
-            RegistrationLink: "TBA",
+            RegistrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdauGHbiQPvD7vaVzYmAjdC1hqlb6R-psr8cl0OPvxR8ksJxQ/viewform",
         },
     ];
 

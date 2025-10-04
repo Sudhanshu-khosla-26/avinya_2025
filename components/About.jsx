@@ -59,7 +59,7 @@ const About = () => {
                         {/* Main description */}
                         <div className="text-sm sm:text-base lg:text-lg leading-relaxed text-gray-200">
                             <p className="mb-4 sm:mb-6">
-                                <span className="text-[#d966ff] font-semibold text-lg sm:text-xl">अVINYA</span>, The Annual Tech Fest of Guru Tegh Bahadur 4th Centenary Engineering College, is a distinguished event celebrating innovation, knowledge, and creativity. Derived from Sanskrit, अVINYA means "Innovation," embodying the fest's mission to offer a platform for students to engage with emerging technologies through a range of exciting events.
+                                <span className="text-[#d966ff] font-semibold text-lg sm:text-xl">अVINYA</span>, The Annual Tech Fest of Guru Tegh Bahadur 4th Centenary Engineering College, is a distinguished event celebrating innovation, knowledge, and creativity. अVINYA means "Innovation," embodying the fest's mission to offer a platform for students to engage with emerging technologies through a range of exciting events.
                             </p>
 
                             <p className="mb-4 sm:mb-6">
@@ -74,16 +74,16 @@ const About = () => {
                             {/* Events grid - responsive */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 text-sm sm:text-base">
                                 {[
-                                    "BUG SMASH",
-                                    "CREATE-A-SCENE",
-                                    "E-SCRAP CANVAS",
-                                    "THINK BYTE",
                                     "TECH TADKA",
                                     "TALK TACT",
-                                    "INNOVISTA",
-                                    "AI CREATIVE CLASH",
                                     "THINK TANK",
-                                    "CYPHER"
+                                    "CYPHER",
+                                    "AI CREATIVE CLASH",
+                                    "BUG SMASH",
+                                    "E-SCRAP CANVAS",
+                                    "THINK BYTE",
+                                    "INNOVISTA",
+                                    "CREATE-A-SCENE",
                                 ].map((event, index) => (
                                     <div key={index} className="flex items-center space-x-2 text-gray-200">
                                         <span className="w-2 h-2 bg-gradient-to-r from-[#5936e5] to-[#d966ff] rounded-full flex-shrink-0"></span>
