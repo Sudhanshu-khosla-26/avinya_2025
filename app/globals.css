@@ -3,6 +3,24 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@layer utilities {
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin 12s linear infinite;
+  }
+  .animate-spin-medium {
+    animation: spin 8s linear infinite;
+  }
+  .animate-spin-fast {
+    animation: spin 4s linear infinite;
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -169,4 +187,8 @@
 /* Smooth transitions for sections */
 section {
   transition: opacity 0.3s ease-in-out;
+}
+
+body {
+  background-color: #09011a; /* Your main dark background color */
 }

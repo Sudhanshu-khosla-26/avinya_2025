@@ -11,7 +11,12 @@ export default function SponsorCarousel() {
         { name: "CyberSec", logo: "/sponsor-cybersec.jpg" },
         { name: "DevTools", logo: "/sponsor-devtools.jpg" },
         { name: "CodeBase", logo: "/sponsor-codebase.jpg" },
+        { name: "CodeBase", logo: "/sponsor-codebase.jpg" },
+        { name: "CodeBase", logo: "/sponsor-codebase.jpg" },
     ]
+
+    const sponsormobile = [
+        { name: "Reskill", logo: "/reskill.webp" }]
 
     // Duplicate sponsors for seamless loop
     const duplicatedSponsors = [...sponsors, ...sponsors]
@@ -58,7 +63,7 @@ export default function SponsorCarousel() {
 
                                             {/* Logo */}
                                             <img
-                                             loading="lazy"
+                                                loading="lazy"
                                                 src={"/reskill.webp"}
                                                 alt={sponsor.name}
                                                 className="relative z-10 h-auto max-h-16 w-auto max-w-full object-contain filter grayscale-50 opacity-70 transition-all duration-500 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110"
@@ -104,7 +109,7 @@ export default function SponsorCarousel() {
 
                     {/* Mobile: Grid Layout */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:hidden gap-6">
-                        {sponsors.map((sponsor, index) => (
+                        {sponsormobile.map((sponsor, index) => (
                             <div
                                 key={`${sponsor.name}-mobile-${index}`}
                                 className="group perspective-1000"

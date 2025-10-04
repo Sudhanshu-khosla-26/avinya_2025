@@ -3,10 +3,15 @@ import React from "react";
 
 // Contact data
 const contacts = [
+    // {
+    //     name: "Sudhanshu Khosla",
+    //     number: "+91 8287036184",
+    //     image: "/SK.png", // Place in /public folder
+    // },
     {
-        name: "Sudhanshu Khosla",
-        number: "+91 8287036184",
-        image: "/SK.png", // Place in /public folder
+        name: "Harsh Raj Singh",
+        number: "+91 7488672705",
+        image: "/harsh.jpg", // replace with your image path
     },
     {
         name: "Kritika Sharma",
@@ -50,7 +55,7 @@ const ContactCard = ({ contact }) => (
 
 const ContactPage = () => {
     return (
-        <div className="min-h-screen bg-[#0f0f1a]  md:pt-14 flex flex-col items-center justify-center px-4">
+        <div className="min-h-screen bg-[#0f0f1a] py-28 pb-8 md:pb-0  md:pt-14 flex flex-col items-center justify-center px-4">
             {/* Heading */}
             <div className="mb-10 text-center">
                 <h1 className="text-4xl md:text-5xl font-bold text-white">Contact Us</h1>

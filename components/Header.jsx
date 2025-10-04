@@ -3,7 +3,27 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 
-const NAV_ITEMS = ["Home", "About", "Gallery", "Event", "Timeline", "Contact"]
+const NAV_ITEMS = [{
+    id: "#Home",
+    name: "Home",
+}, {
+    id: "#About",
+    name: "About",
+}, {
+    id: "#Gallery",
+    name: "Gallery",
+}, {
+    id: "#Event",
+    name: "Event",
+}, {
+    id: "#Timeline",
+    name: "Timeline",
+},
+{
+    id: "contact",
+    name: "Contact",
+}
+]
 
 const Header = () => {
     const [open, setOpen] = useState(false)
@@ -43,12 +63,12 @@ const Header = () => {
                     </div>
                     <ul className="flex items-center gap-6 text-lg font-serif">
                         {NAV_ITEMS.map((item) => (
-                            <Link href={`/#${item}`}>
+                            <Link href={`/${item.id}`}>
                                 <li
-                                    key={item}
+                                    key={item.name}
                                     className="cursor-pointer hover:text-gray-300 relative before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-0 before:h-[2px] before:bg-white before:transition-all before:duration-300 hover:before:w-full after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-gradient-to-r after:from-[#b3b3b3] after:to-[#bc89ff] after:opacity-0 hover:after:opacity-100 after:transition-all after:duration-300 px-1"
                                 >
-                                    {item}
+                                    {item.name}
                                 </li>
                             </Link>
                         ))}
@@ -90,9 +110,9 @@ const Header = () => {
                 >
                     <ul className="flex flex-col gap-3 px-4 py-3 text-base font-serif">
                         {NAV_ITEMS.map((item) => (
-                            <Link href={`/#${item}`}>
-                                <li key={item} className="py-1 cursor-pointer hover:text-gray-300" onClick={() => setOpen(false)}>
-                                    {item}
+                            <Link href={`/${item.id}`}>
+                                <li key={item.name} className="py-1 cursor-pointer hover:text-gray-300" onClick={() => setOpen(false)}>
+                                    {item.name}
                                 </li>
                             </Link>
                         ))}

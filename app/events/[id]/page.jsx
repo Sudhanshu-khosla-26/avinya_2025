@@ -192,7 +192,7 @@ const EventDetailsPage = ({ params }) => {
                     <div className="mb-12">
                         <div className="flex flex-col md:flex-row relative items-center gap-8 mb-8">
                             {/* Compact Image */}
-                            <div className="w-full max-w-sm block mx-auto md:mx-0 md:sticky self-start md:top-36">
+                            <div className=" relative w-full max-w-sm block mx-auto md:mx-0 md:sticky self-start md:top-36">
                                 <div className="relative z-10  rounded-2xl overflow-hidden border border-slate-800 shadow-xl">
                                     <img
                                         src={event.imageUrl}
@@ -201,7 +201,7 @@ const EventDetailsPage = ({ params }) => {
                                     />
 
                                 </div>
-                                <div className="absolute -inset-2 bg-gradient-to-r from-purple-600/30 to-pink-500/30  blur-2xl opacity-100 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-500"></div>
+                                <div className="absolute -inset-2   bg-gradient-to-r from-purple-600/30 to-pink-500/30  blur-2xl opacity-100 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-500"></div>
 
                             </div>
 
@@ -228,7 +228,7 @@ const EventDetailsPage = ({ params }) => {
 
                                 {/* CTA */}
                                 <a href={event.RegistrationLink} target="_blank" rel="noopener noreferrer" className="inline-block">
-                                    <button className="px-8 py-4 border border-white/10 bg-white/5 rounded-xl text-white font-semibold text-lg shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 active:scale-95">
+                                    <button className="px-8 py-4 border animate-bounce-slow border-white/10 bg-white/5 rounded-xl cursor-pointer text-white font-semibold text-lg shadow-lg shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 active:scale-95">
                                         Register Now
                                     </button>
                                 </a>
@@ -257,7 +257,7 @@ const EventDetailsPage = ({ params }) => {
                                                     .map((line, idx) => (
                                                         <li key={idx} className="text-slate-300 leading-relaxed flex items-start gap-3 hover:text-white transition-colors duration-200">
                                                             <span className="text-blue-500 flex-shrink-0 text-xl leading-none">•</span>
-                                                            <span>{line}</span>
+                                                            <span className="text-start">{line}</span>
                                                         </li>
                                                     ))}
                                             </ul>
@@ -323,6 +323,32 @@ const EventDetailsPage = ({ params }) => {
                 </div>
             </div>
             <Footer />
+            <style jsx>{`
+        @keyframes pulse-slow {
+          0%, 100% { transform: scale(1); opacity: 0.6; }
+          50% { transform: scale(1.02); opacity: 0.8; }
+        }
+        .animate-pulse-slow {
+          animation: pulse-slow 4s ease-in-out infinite;
+        }
+        @keyframes float-slow {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-5px); }
+        }
+        .animate-float-slow {
+          animation: float-slow 6s ease-in-out infinite;
+        }
+        @keyframes fade-in {
+          0% { opacity: 0; transform: translateY(10px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+          animation: fade-in 1s ease forwards;
+        }
+        .animate-bounce-slow {
+          animation: bounce 3s ease-in-out infinite;
+        }
+      `}</style>
         </>
 
     )

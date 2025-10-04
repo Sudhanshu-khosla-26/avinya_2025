@@ -49,7 +49,7 @@ const Home = () => {
                     </div>
 
                     {/* Text content */}
-                    <div className="order-1 relative right-0 md:right-[100px] lg:right-[80px] md:order-2  flex flex-col items-center md:items-start md:mt-14 ">
+                    <div className="order-1 relative right-0 md:right-[70px] lg:[80px] md:order-2  flex flex-col items-center md:items-start md:mt-14 ">
                         <div className="mx-auto animate-pulse duration-300 w-fit px-4 py-1 my-4 md:my-0 flex items-center text-white bg-white/5 rounded-full shadow-lg backdrop-blur-md border border-white/50">
                             <span className="text-sm text-muted-foreground">Inter-College Tech Fest 2025</span>
                         </div>

@@ -126,8 +126,8 @@ const TimelineCard = ({ event }) => (
 
 const Timeline = () => {
     return (
-        <div className="mt-20 flex flex-col">
-            <div className="relative px-10 w-full mb-6 sm:mb-8 lg:mb-12 text-white">
+        <div className="mt-20 flex flex-col mx-auto">
+            <div className="relative px-10 w-full mx-auto max-w-7xl mb-6 sm:mb-8 lg:mb-12 text-white">
                 <BlurText
                     text="Timeline"
                     delay={150}

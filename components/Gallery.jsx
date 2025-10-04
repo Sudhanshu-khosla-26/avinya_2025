@@ -7,7 +7,7 @@ const Gallery = () => {
     return (
         <div className="relative w-full bg-[#09011A] text-white p-4 sm:p-6 md:px-0 md:pt-8 md:pb-14">
             {/* Heading */}
-            <div className="relative w-full mb-6 sm:mb-8 md:px-8 lg:pl-4">
+            <div className="relative max-w-7xl mx-auto w-full mb-6 sm:mb-8 md:px-8 lg:pl-4">
                 <BlurText
                     text="Glimpses of the अVINYA 2024"
                     delay={150}
@@ -20,7 +20,7 @@ const Gallery = () => {
             </div>
 
             {/* Desktop: Circular Gallery */}
-            <div className="hidden md:block" style={{ height: "600px", width: "100%", position: "relative" }}>
+            <div className="hidden md:block " style={{ height: "600px", width: "100%", position: "relative" }}>
                 <CircularGallery
                     className="absolute top-0"
                     bend={3}

@@ -258,7 +258,7 @@ const Event = () => {
         <>
             {/*  <div className="min-h-screen bg-gradient-to-br from-slate-950 text-white via-purple-950 to-slate-950 p-4 sm:p-6 md:p-8"> */}
             <div className="relative min-h-screen bg-[#09011A] text-white p-4 sm:p-6 md:p-8 md:pb-14">
-                <div className="relative w-full mb-6 sm:mb-8 lg:mb-12">
+                <div className="relative w-full max-w-7xl mx-auto mb-6 sm:mb-8 lg:mb-12   ">
                     <BlurText
                         text="अVINYA Events"
                         delay={150}
