@@ -109,7 +109,7 @@ const Event = () => {
                 "Stay Focused: Keep your arguments concise and centered around 2–3 strong points.\nSupport Your Claims: Use logic, relevant examples, or reference to back up your arguments.\nRebuttals: Directly counter the opposing side's points during the rebuttal stage.\nMaintain Respect: Focus on the topic at hand; avoid personal comments or attacks.\nImpactful Closing: End with a strong closing line that resonates with the audience.\nBring your college ID.",
             Topic: "Will be provided on the spot; it will be related to technology",
             summary: "A debate showdown where teams argue persuasively on tech topics with logic, respect, and impact.",
-            timing: "11:30 AM - 2:00 PM",
+            timing: "11:30 AM",
             venue: "EG-2 LAB",
             imageUrl: "/talktact.webp",
             RegistrationLink: "https://docs.google.com/forms/d/1hlcZAVlOp8rJ8WEDWz0kNajsDNZZNrarV0l1dG4171A/edit?ts=68dd4025",
@@ -127,7 +127,7 @@ const Event = () => {
                 "Individual participation.\nUse any AI tool/tech.\nBring laptops/software.\nInternet access provided.",
             summary:
                 "AI Creative Clash @ अvinya 2025 – where imagination meets AI! Compete with creativity, innovation & fun.",
-            timing: "2:00 PM",
+            timing: "10:30 AM",
             venue: "CM LAB , MMS BLOCK",
             imageUrl: "/ai_creative_clash.webp",
             RegistrationLink: "https://forms.gle/N2RG3GH3YC63ov688",
@@ -181,7 +181,7 @@ const Event = () => {
             Criteria: "Creativity & Design, Clarity of Concept, Originality, Presentation",
             summary:
                 "Create-a-Scene lets students design & present scientific posters on trending tech topics. Top 3 win goodies, all get e-certificates.",
-            timing: "10:30 AM – 12:30 PM",
+            timing: "10:30 AM",
             venue: "EG LAB, MMS Block",
             imageUrl: "/create_a_scene.webp",
             RegistrationLink:
