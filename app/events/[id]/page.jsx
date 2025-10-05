@@ -16,9 +16,9 @@ const EventDetailsPage = ({ params }) => {
             summary: "A culinary competition where technology meets taste - create dishes inspired by tech innovations.",
             timing: "12:00 PM",
             venue: "R1, MMS Block",
-            imageUrl: "/tech_tadka.webp",
+            imageUrl: "/TECH_TAKDA.webp",
             RegistrationLink:
-                "https://docs.google.com/forms/d/e/1FAIpQLSfMTFiep8FiqemcLDFVWXhgj4cEMnzIQvr_lYKD3cYbFkJxjQ/viewform?usp=sharing&ouid=110509867479283756092",
+                "https://docs.google.com/forms/d/1cJFtQML6AqvG3a15HlBjkeWjU9dipJudkb8zNNOCiGw/edit?usp=sharing_eip_se_dm&ts=68dd659c"
         },
         {
             title: "TALK TACT",
