@@ -2,7 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import "./globals.css";
 import SmoothScrolling from "@/components/SmoothScrolling";
-// import LoadingScreen from "@/components/LoadingScreen";
+import { Analytics } from "@vercel/analytics/next"
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -66,7 +67,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* <LoadingScreen /> */}
+        <Analytics />
         <SmoothScrolling>
           <Header />
           {children}
