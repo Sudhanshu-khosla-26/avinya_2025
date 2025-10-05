@@ -82,11 +82,11 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Analytics />
         <SmoothScrolling>
           <Header />
           {children}
         </SmoothScrolling>
+        <Analytics />
       </body>
     </html>
   );
