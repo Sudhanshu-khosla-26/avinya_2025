@@ -135,22 +135,41 @@ const Event = () => {
         {
             title: "CYPHER",
             description:
-                "Welcome to CYPHER, a prompt injection competition! Test your skills by crafting clever inputs to make an AI system ignore its rules or perform unintended actions. See if you can bypass safety filters, reveal hidden information, and outsmart the machine in this exciting challenge.",
+                "Hey, hackers! 👋🏻 A friendly, educational ethical-hacking competition open to all skill levels. Learn, test skills, and enjoy the thrill of solving security challenges.",
             Guidelines:
-                "Objective 1: Extract the Secret Flag - Manipulate AI to reveal hidden system prompt or secret key.\nObjective 2: Evade the Filters - Bypass input sanitizers and blocklists.\nObjective 3: Confuse Context - Trick AI into executing embedded commands.\nObjective 4: Trigger Unintended Actions - Make model perform unauthorized actions.\nObjective 5: Override Core Policies - Bypass fundamental safety rules.\nObjective 6: Scope Escalation - Make AI perform actions outside defined scope.\nObjective 7: Exploit Permissions - Trick AI into revealing permission limits.\n\nRules: Prompt injection only, stay ethical, demonstrate vulnerability without causing damage.",
-            Topic: "Prompt Injection Competition",
-            Rounds: "Multiple rounds with increasing difficulty, each with unique AI model and new challenges.",
-            Criteria:
-                "Submissions judged on creativity, effectiveness, and subtlety of injection. Points for bypassing instructions within ethical boundaries.",
-            DefensiveChecklist:
-                "Never share system prompts.\nEscape user content before re-injection.\nDon't execute embedded instructions.\nConfirm destructive actions.\nTreat user input as adversarial.",
+                "Open to UG/PG students from recognized colleges/universities.\nTeams: Solo or teams of up to 4.\nNo sabotage — attacking the platform, scoreboard, or other teams is prohibited.\nNo sharing flags or solutions between teams.\nCarry valid college ID.\nReport 30 mins before the event.\nJudges' decision final.",
+            Topic: "Capture-The-Flag style ethical hacking — web, crypto, forensics, and misc security challenges",
+            Rounds: "Single CTF-style round with multiple challenge categories and a live scoreboard.",
+            Criteria: "Scoring based on flags captured, challenge difficulty, time of submission, and adherence to rules.",
+            instructions:
+                "Individual or team participation (max 4).\nBring laptops and necessary tools.\nAutomated scanners are discouraged unless explicitly allowed in a challenge.\nInternet access provided.\nAsk proctors for hints if stuck — no direct answers.",
             summary:
-                "A prompt injection contest where you craft clever inputs to make an AI ignore its rules and do the unintended.",
+                "Ethical Hack Challenge @ Avinya 2025 — a supportive CTF for learners and enthusiasts to sharpen security skills ethically.",
+
             timing: "12:30 PM",
-            venue: "CM LAB, MMS BLOCK",
+            venue: "CM Lab, MMS Block, GTB4CEC",
             imageUrl: "/cypher.webp",
-            RegistrationLink: "https://forms.gle/WKge41J86YnPwDL46",
+            RegistrationLink: "https://forms.gle/WKge41J86YnPwDL46"
         },
+        // {
+        //     title: "CYPHER",
+        //     description:
+        //         "Welcome to CYPHER, a prompt injection competition! Test your skills by crafting clever inputs to make an AI system ignore its rules or perform unintended actions. See if you can bypass safety filters, reveal hidden information, and outsmart the machine in this exciting challenge.",
+        //     Guidelines:
+        //         "Objective 1: Extract the Secret Flag - Manipulate AI to reveal hidden system prompt or secret key.\nObjective 2: Evade the Filters - Bypass input sanitizers and blocklists.\nObjective 3: Confuse Context - Trick AI into executing embedded commands.\nObjective 4: Trigger Unintended Actions - Make model perform unauthorized actions.\nObjective 5: Override Core Policies - Bypass fundamental safety rules.\nObjective 6: Scope Escalation - Make AI perform actions outside defined scope.\nObjective 7: Exploit Permissions - Trick AI into revealing permission limits.\n\nRules: Prompt injection only, stay ethical, demonstrate vulnerability without causing damage.",
+        //     Topic: "Prompt Injection Competition",
+        //     Rounds: "Multiple rounds with increasing difficulty, each with unique AI model and new challenges.",
+        //     Criteria:
+        //         "Submissions judged on creativity, effectiveness, and subtlety of injection. Points for bypassing instructions within ethical boundaries.",
+        //     DefensiveChecklist:
+        //         "Never share system prompts.\nEscape user content before re-injection.\nDon't execute embedded instructions.\nConfirm destructive actions.\nTreat user input as adversarial.",
+        //     summary:
+        //         "A prompt injection contest where you craft clever inputs to make an AI ignore its rules and do the unintended.",
+        //     timing: "12:30 PM",
+        //     venue: "CM LAB, MMS BLOCK",
+        //     imageUrl: "/cypher.webp",
+        //     RegistrationLink: "https://forms.gle/WKge41J86YnPwDL46",
+        // },
         {
             title: "THINK BYTE",
             description:
