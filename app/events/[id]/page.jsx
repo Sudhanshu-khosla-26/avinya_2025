@@ -111,7 +111,7 @@ const EventDetailsPage = ({ params }) => {
             description:
                 "Create artwork using old/obsolete electronics. Solo or Teams of 2-3 members will compete for amazing prizes.",
             Guidelines:
-                "Participants must complete artwork at home.\nOnly 15 minutes will be given for setup & finishing touches.\nMain element must be from e-waste (NO LIVE ELECTRONICS).\nPresent creation before judges explaining idea, process, and uniqueness.",
+                "Participants must complete artwork at home.\nOnly 45 minutes will be given for setup & finishing touches.\nMain element must be from e-waste (NO LIVE ELECTRONICS).\nPresent creation before judges explaining idea, process, and uniqueness.",
             Criteria: "Creativity, use of e-waste materials, originality, and presentation quality",
             summary:
                 "Transform electronic waste into artistic masterpieces - a creative competition celebrating sustainability.",

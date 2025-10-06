@@ -83,12 +83,14 @@ const Header = () => {
             {/* Mobile navbar */}
             <nav className="fixed top-0 block lg:hidden z-50 text-white w-full">
                 <div className="mx-auto w-full flex px-4 py-3 items-center gap-3 bg-white/5 shadow-lg backdrop-blur-md">
-                    <div className={`font-bold flex flex-1 items-center gap-2 transition-all duration-300 ${textSize}`}>
-                        <img src="/logo.png" className="w-10 h-10" alt="logo" />
-                        <span className="leading-tight">
-                            Guru Tegh Bahadur 4th Centenary Engineering College
-                        </span>
-                    </div>
+                    <Link href={`/#Home`} >
+                        <div className={`font-bold flex flex-1 items-center gap-2 transition-all duration-300 ${textSize}`}>
+                            <img src="/logo.png" className="w-10 h-10" alt="logo" />
+                            <span className="leading-tight">
+                                Guru Tegh Bahadur 4th Centenary Engineering College
+                            </span>
+                        </div>
+                    </Link>
 
                     <button
                         type="button"
