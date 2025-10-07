@@ -17,27 +17,38 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Avinya 2025 | Premier Tech & Robotics Event",
+  title: "Avinya 2025 | Annual Tech Fest of GTB4CEC",
   description:
-    "Join Avinya 2025 - A groundbreaking technology and robotics symposium featuring cutting-edge innovations, AI demonstrations, and expert workshops. Experience the future of technology.",
+    "Join Avinya 2025 — the flagship annual tech fest of Guru Tegh Bahadur 4th Centenary Engineering College. Celebrate innovation, creativity, and technology through 10 electrifying sub-events including AI Creative Clash, Bug Smash, Think Tank, and more!",
   keywords:
-    "Avinya 2025, robotics event, technology symposium, AI conference, tech fest, innovation, engineering, robotics competition",
-  authors: [{ name: "Avinya Team" }],
-  creator: "Avinya 2025",
-  publisher: "Avinya",
+    "Avinya 2025, GTB4CEC, The Empirical Society, tech fest, innovation, AI event, coding competition, robotics, engineering college, technology festival, creativity, startup ideas, hackathon",
+  authors: [{ name: "The Empirical Society" }],
+  creator: "The Empirical Society, GTB4CEC",
+  publisher: "Guru Tegh Bahadur 4th Centenary Engineering College",
   openGraph: {
-    title: "Avinya 2025 | Premier Tech & Robotics Event",
+    title: "Avinya 2025 | GTB4CEC’s Flagship Tech Fest",
     description:
-      "Experience the future of technology at Avinya 2025. Cutting-edge robotics, AI innovations, and expert-led workshops.",
-    type: "website",
-    locale: "en_US",
+      "Experience innovation, AI, coding, creativity, and collaboration at Avinya 2025 — the premier tech festival of GTB4CEC. Compete, create, and celebrate technology with The Empirical Society.",
+    url: "https://avinya-2025-nu.vercel.app/",
     siteName: "Avinya 2025",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/mainPoster.webp", // replace with your actual OG image
+        width: 1200,
+        height: 630,
+        alt: "Avinya 2025 - GTB4CEC Tech Fest",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Avinya 2025 | Premier Tech & Robotics Event",
+    title: "Avinya 2025 | GTB4CEC’s Flagship Tech Fest",
     description:
-      "Experience the future of technology at Avinya 2025. Cutting-edge robotics, AI innovations, and expert-led workshops.",
+      "Celebrate innovation, creativity, and technology at Avinya 2025. Explore 10 dynamic sub-events and shape the future with The Empirical Society.",
+    creator: "@theempiricalsociety", // optional if you have a handle
+    images: ["/mainPoster.webp"], // same OG image
   },
   robots: {
     index: true,
@@ -56,11 +67,10 @@ export const metadata = {
     maximumScale: 5,
   },
   icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-    ],
+    icon: [{ url: "/favicon.ico", sizes: "any" }],
   },
 };
+
 
 export default function RootLayout({ children }) {
   return (
