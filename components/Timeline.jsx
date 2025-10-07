@@ -71,8 +71,15 @@ const timeline = [
         title: "CYPHER",
         timing: "12:30 PM",
         venue: "CM LAB",
-        description: "A prompt injection competition! Test your skills by crafting clever inputs to outsmart AI systems.",
+        description:
+            "Hey, hackers! 👋🏻 A friendly and educational ethical-hacking competition open to all skill levels. Learn, test your skills, and experience the thrill of solving cybersecurity challenges ethically.",
     },
+    // {
+    //     title: "CYPHER",
+    //     timing: "12:30 PM",
+    //     venue: "CM LAB",
+    //     description: "A prompt injection competition! Test your skills by crafting clever inputs to outsmart AI systems.",
+    // },
     {
         title: "BUG SMASH",
         timing: "12:30 PM",
